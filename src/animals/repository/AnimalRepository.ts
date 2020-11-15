@@ -7,6 +7,7 @@ import { AnimalDto } from '../dto/animal.dto';
 
 @EntityRepository(AnimalEntity)
 export class AnimalRepository extends Repository<AnimalEntity> {
+    /*
 
     async getAnimalByIdWithPhotos(idAnimal: number): Promise<AnimalDto> {
         return await getRepository(AnimalEntity)
@@ -18,12 +19,13 @@ export class AnimalRepository extends Repository<AnimalEntity> {
             .where("animal.id = :id", { id: idAnimal})
             .getOne();
     }
+    */
 
     async createAnimal(animalDto: AnimalDto) {
         return await this.save(animalDto);
     };
 
-    async findAvailable(): Promise<AnimalDto[] | AnimalDto> {
+    async findAvailable(): Promise<AnimalEntity[]> {
         const animals = await getRepository(AnimalEntity)
             .createQueryBuilder("animal")
             .innerJoinAndSelect("animal.breed", "breed")

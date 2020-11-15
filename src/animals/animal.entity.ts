@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToOne, JoinColumn, OneToMany } from 'typeorm';
 import { BreedEntity } from 'src/breed/breed.entity';
 import { StateEntity } from 'src/state/state.entity';
-import { PhotoEntity } from '../photo/photo.entity';
+//import { PhotoEntity } from '../photo/photo.entity';
 
 @Entity()
 export class AnimalEntity {
@@ -34,8 +34,9 @@ export class AnimalEntity {
 
   @ManyToOne(type => StateEntity,state => state.id,{eager:true})
   state: StateEntity;
-
+/*
   @OneToMany(type => PhotoEntity,photo => photo.animal,{eager:true})
   photos: PhotoEntity[];
+  */
 
 }

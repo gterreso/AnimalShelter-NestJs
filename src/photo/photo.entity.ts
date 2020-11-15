@@ -1,3 +1,4 @@
+/*
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToOne, JoinColumn, OneToMany } from 'typeorm';
 import { AnimalEntity } from '../animals/animal.entity';
 
@@ -18,3 +19,4 @@ export class PhotoEntity {
 
 
 }
+*/

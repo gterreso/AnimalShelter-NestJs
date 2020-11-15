@@ -9,10 +9,10 @@ import { SpeciesRepository } from 'src/species/repository/SpeciesRepository';
 
 import {  BreedService } from 'src/breed/breed.service';
 import { BreedRepository } from 'src/breed/repository/BreedRepository';
-import { PhotoRepository } from 'src/photo/repository/PhotoRepository';
+//import { PhotoRepository } from 'src/photo/repository/PhotoRepository';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([AnimalRepository]),TypeOrmModule.forFeature([SpeciesRepository]),TypeOrmModule.forFeature([BreedRepository]),TypeOrmModule.forFeature([PhotoRepository])],
+  imports: [TypeOrmModule.forFeature([AnimalRepository]),TypeOrmModule.forFeature([SpeciesRepository]),TypeOrmModule.forFeature([BreedRepository]),/*TypeOrmModule.forFeature([PhotoRepository])*/],
   controllers: [AnimalsController],
   providers: [AnimalsService,SpeciesService,BreedService]
 })

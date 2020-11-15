@@ -1,3 +1,4 @@
+/*
 import { EntityRepository, Repository } from 'typeorm';
 import {getRepository} from "typeorm";
 import { PhotoEntity } from '../photo.entity';
@@ -14,3 +15,4 @@ export class PhotoRepository extends Repository<PhotoEntity> {
     }
    
 }
+*/

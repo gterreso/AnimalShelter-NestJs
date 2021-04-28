@@ -21,11 +21,11 @@ import { PhotoModule } from './photo/photo.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'ec2-52-209-134-160.eu-west-1.compute.amazonaws.com',
+      host: process.env.DATABASE_URL,
       port: 5432,
-      username: 'obgtzrjccovivb',
-      password: '5f0e3aadf7b34de2d1dfce9c2c2cb669b0c66ef3a75dc1ed4aca7a7ae6d48327',
-      database: 'd5hhnogcedn0th',
+      username: process.env.DATABASE_USERNAME,
+      password: process.env.DATABASE_PASSWORD,
+      database: process.env.DATABASE_NAME,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
       ssl:true,

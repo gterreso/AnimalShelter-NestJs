@@ -20,14 +20,20 @@ import { PhotoModule } from './photo/photo.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: '',
-      database: 'nest',
+      type: 'postgres',
+      host: 'ec2-52-209-134-160.eu-west-1.compute.amazonaws.com',
+      port: 5432,
+      username: 'obgtzrjccovivb',
+      password: '5f0e3aadf7b34de2d1dfce9c2c2cb669b0c66ef3a75dc1ed4aca7a7ae6d48327',
+      database: 'd5hhnogcedn0th',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
+      ssl:true,
+      extra: {
+        ssl: {
+          rejectUnauthorized: false,
+        }
+   }
     }),
     AnimalsModule,
     SpeciesModule,

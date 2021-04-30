@@ -1,8 +1,8 @@
 import { Controller, Get, Query, Post, Body,UseGuards,Param, Delete, Put, Res } from '@nestjs/common';
 import { Response } from 'express';
-import { StateDto } from './dto/state.dto';
+import { StateDto } from './dto/State.dto';
 import { AuthGuard } from '@nestjs/passport';
-import { StateService } from './state.service';
+import { StateService } from './State.service';
 
 
 @Controller("api/state")

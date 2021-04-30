@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { State } from './interfaces/state.interface';
+import { State } from './interfaces/State.interface';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { StateEntity } from './state.entity';
-import { StateDto } from './dto/state.dto';
+import { StateDto } from './dto/State.dto';
 import { StateRepository } from './repository/StateRepository';
 
 @Injectable()

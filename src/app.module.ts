@@ -13,7 +13,7 @@ import { SpeciesModule } from './species/species.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { BreedModule } from './breed/breed.module';
-import { StateModule } from './state/state.module';
+import { StateModule } from './state/State.module';
 import { PhotoModule } from './photo/photo.module';
 
 

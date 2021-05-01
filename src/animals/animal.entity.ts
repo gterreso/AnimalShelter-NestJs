@@ -20,7 +20,10 @@ export class AnimalEntity {
   @Column('date')
   birthDate: Date;
 
-  @Column('date')
+  @Column({
+    type: "date",
+    nullable: true,
+})
   deathDate: Date;
 
   @Column({ length: 1 })
